@@ -1,7 +1,53 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
-
+.item-photo {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    line-height: 1;
+    &:before {
+        content: "";
+        display: none;
+        padding-top: 100%;
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background: fade(#2c2d32, 30);
+        opacity: 0;
+        transition: opacity ease 0.2s;
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+.elm-image, .elm-ico, .button-ico, .menu-ico, .frm-ico {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    img, .i {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */

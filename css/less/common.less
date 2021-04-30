@@ -52,13 +52,38 @@
     padding: 0 15px;
     margin-bottom: 30px;
     &.wrap-more {
+        width: 100%;
         &~.item-wrap {
             display: none;
+            animation: fadeinslide ease 0.2s;
         }
         &.active {
             display: none;
             &~.item-wrap {
                 display: block;
+            }
+        }
+    }
+}
+.wrap-more {
+    text-align: center;
+    line-height: 1;
+    .btn,
+    button,
+    input[type="submit"] {
+    	min-width: 240px;
+        &:before {
+            content: attr(data-show);
+        }
+    }
+}
+.items-wrap.active {
+    .wrap-more {
+        .btn,
+        button,
+        input[type="submit"] {
+        	&:before {
+                content: attr(data-hide);
             }
         }
     }

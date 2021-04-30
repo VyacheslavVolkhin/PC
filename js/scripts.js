@@ -20,6 +20,20 @@ $(document).ready(function(){
 	  return this;
 	};
 
+    //item-video
+    $('.js-btn-video').on('click', function () {
+        $(this).parents('.item-video').addClass('active');
+        return false;
+    })
+
+
+	//wrap more
+    $('.wrap-more a').on('click', function() {
+        $(this).parents('.items-wrap').toggleClass('active');
+        $(this).parents('.items-inner-wrap').toggleClass('active');
+        return false;
+    })
+
 	//popup block
 	$('.js-popup-wrap .js-btn-toggle').on('click', function() {
 		if ($(this).hasClass('active')) {

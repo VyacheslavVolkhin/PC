@@ -10,7 +10,10 @@ input[type="range"],
 input[type="search"],
 input[type="tel"],
 input[type="url"] {
-	
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    color: var(--clr-base);
 }
 textarea {
 	height: 100px;
@@ -21,7 +24,222 @@ textarea {
 .btn,
 button,
 input[type="submit"] {
-	
+    background: #E48D56;
+    box-shadow: 0px 5px 15px rgba(8, 35, 48, 0.06), 0px 3px 5px rgba(8, 35, 48, 0.1);
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    height: 39px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    padding: 0 1.5em;
+    &:hover {
+        background: #ADD14D;
+        color: #fff;
+    }
+    &.button-tag {
+        height: 39px;
+        border: 1px solid #A4B6C5;
+        border-radius: 5px;
+        padding: 0 15px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #A4B6C5;
+        background: none;
+        box-shadow: none;
+        white-space: nowrap;
+        max-width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &:hover, &.active {
+            border-color: #E48D56;
+            color: #E48D56;
+        }
+        .button-title {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            max-width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+    &.button-border, &.button-border-second {
+        border: 1px solid #A4B6C5;
+        background: none;
+        color: #000;
+        box-shadow: none;
+        &:hover {
+            border-color: #E48D56;
+            color: #E48D56;
+        }
+    }
+    &.button-border-second {
+        border-color: #E48D56;
+        color: #E48D56;
+        &:hover {
+            background: #E48D56;
+            color: #fff;
+        }
+    }
+    &.button-second {
+        background: #538742;
+        &:hover {
+            background: #538742 - #222;
+        }
+    }
+}
+.btn-action-ico {
+	min-width: 0;
+	border-radius: 0;
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width: 40px;height: 40px;
+	text-align: center;
+	line-height: 40px;
+	text-decoration: none;
+	transition: all ease 0.2s;
+    &:not(.btn) {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+    &.btn {
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        display: block;
+    }
+	&:before, &:after, .i, img {
+		display: block;
+		position: absolute;
+		top: 0;bottom: 0;left: 0;right: 0;
+		margin: auto;
+		max-width: 100%;
+		max-height: 100%;
+		transition: all ease 0.2s;
+	}
+	&:before, &:after {
+		content: "";
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: auto auto;
+	}
+	&:hover {
+		text-decoration: none;
+		&:not(.btn) {
+            background: none;
+            box-shadow: none;
+        }
+	}
+    &.button-soc {
+        width: 42px;
+        height: 42px;
+        background: #3A4250;
+        border-radius: 50%;
+        &:hover {
+            background: #3A4250+#222;
+        }
+        img {
+            max-width: 24px;
+            max-height: 24px;
+        }
+    }
+    &.ico-close {
+        &:before, &:after {
+            content: "";
+            display: block;
+            width: 18px;
+            height: 2px;
+            top: 50%;
+            left: 50%;
+            right: auto;
+            bottom: auto;
+            background: #000;
+            margin-top: -1px;
+            margin-left: -9px;
+            .t-rotate(45deg);
+        }
+        &:before {
+            .t-rotate(-45deg);
+        }
+    }
+    &.ico-menu {
+        &:before {
+            background-image: url(../img/icons/menu.svg);
+            background-size: 28px auto;
+            transition: none;
+        }
+        &:after {
+            transition: none;
+        }
+        &.active {
+            &:before, &:after {
+                width: 20px;
+                height: 2px;
+                background: #538742;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                bottom: auto;
+                right: auto;
+                margin: -1px 0 0 -10px;
+                .t-rotate(45deg);
+            }
+            &:before {
+                .t-rotate(-45deg);
+            }
+        }
+    }
+    &.ico-compare {
+        &:before {
+            background-image: url(../img/icons/compare.svg);
+            background-size: 32px auto;
+        }
+    }
+    &.ico-fav {
+        &:before {
+            background-image: url(../img/icons/fav.svg);
+            background-size: 32px auto;
+        }
+    }
+    &.ico-compare-light {
+        &:before {
+            background-image: url(../img/icons/compare-light.svg);
+            background-size: 28px auto;
+        }
+    }
+    &.ico-fav-light {
+        &:before {
+            background-image: url(../img/icons/fav-light.svg);
+            background-size: 28px auto;
+        }
+    }
+    &.ico-stock {
+        &:before {
+            background-image: url(../img/icons/stock.svg);
+            background-size: 28px auto;
+        }
+    }
+    &.ico-outstock {
+        &:before {
+            background-image: url(../img/icons/outstock.svg);
+            background-size: 28px auto;
+        }
+    }
+    &.ico-play {
+        width: 66px;
+        height: 50px;
+        &:before {
+            right: 16px;
+            background-image: url(../img/icons/play.svg);
+        }
+    }
 }
 .frm-row,
 .frm-field,
@@ -48,4 +266,44 @@ input[type="submit"] {
 		position: relative;
 		cursor: pointer;
 	}
+}
+.frm-main-search {
+    position: relative;
+    line-height: 1;
+    .btn,
+    button,
+    input[type="submit"] {
+        height: 42px;
+        padding: 0 18px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 5px;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    input[type="text"],
+    input[type="search"] {
+        height: 42px;
+        border: 1px solid #EE7719;
+        border-radius: 5px;
+        padding: 0 100px 0 15px;
+        font-size: 12px;
+    }
+    [placeholder]::-webkit-input-placeholder {color: var(--clr-light);}
+    [placeholder]:-moz-placeholder {color: var(--clr-light);}
+    [placeholder]::-moz-placeholder {color: var(--clr-light);}
+    [placeholder]:-ms-input-placeholder {color: var(--clr-light);}
+}
+@media (min-width: 1024px) {
+    .btn-action-ico {
+        &.ico-play {
+            width: 120px;
+            height: 100px;
+            &:before {
+                right: 20px;
+            }
+        }
+    }
 }

@@ -26,6 +26,12 @@ $(document).ready(function(){
         return false;
     })
 
+    //btn tgl
+    $('.js-btn-tgl').on('click', function () {
+        $(this).toggleClass('active');
+        return false;
+    })
+
 
 	//wrap more
     $('.wrap-more a').on('click', function() {
@@ -96,7 +102,7 @@ $(document).ready(function(){
 			$(this).next('.js-tab-content').show(0);
 		}
 	})
-	$('.js-tabs-nav li a').on('click', function() {
+	$('.js-tabs-nav li a[data-tab]').on('click', function() {
 		if ($(this).hasClass('active')) {} else {
 			$('.js-tab-block').removeClass('active');
 			$(this).parents('.js-tabs-nav').find('.active').removeClass('active');
@@ -114,5 +120,49 @@ $(document).ready(function(){
 			$(this).addClass('active').next('.js-tab-content').slideDown(200);
 		}
 	})
+
+    //card slider
+    $('.photos-slider-box .slider-wrap .slider').slick({
+        dots: false,
+        slidesToShow: 1,
+        infinite: false,
+        prevArrow: '',
+        nextArrow: '',
+    });
+    $('.photos-slider-box .slider-preview-wrap .slider').slick({
+        dots: false,
+        slidesToShow: 3,
+        vertical: false,
+        infinite: false,
+        prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
+        nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: true,
+                }
+            },
+        ]
+    });
+    $('.photos-slider-box .slider-preview-wrap .slider .item-photo').click(function () {
+        let newSlide = $(this).attr('data-slide');
+        $('.photos-slider-box .slider-wrap .slider').slick('slickGoTo', newSlide);
+        return false;
+    })
 	
 });

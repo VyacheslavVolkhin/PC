@@ -549,6 +549,7 @@ html, body {
         color: #000;
         text-decoration: none;
         padding: 4px 15px 4px 67px;
+        background: #fff;
         &:hover, &.active {
             color: #E48D56;
         }
@@ -606,6 +607,9 @@ html, body {
         display: block;
         width: 100%;
     }
+}
+.side-wrap {
+    display: none;
 }
 @media (max-width: 1023px) {
     .footer {
@@ -767,6 +771,22 @@ html, body {
     }
 }
 @media (min-width: 1024px) {
+    .content-outer-wrap {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .side-wrap {
+        width: 360px;
+        flex-shrink: 0;
+        display: block;
+        padding: 0 30px 0 0;
+        margin-bottom: 40px;
+    }
+    .content-wrap {
+        flex: 1;
+        margin-bottom: 40px;
+        max-width: calc(100% - 360px);
+    }
     .page {
         padding-top: 28px;
     }
@@ -1149,6 +1169,13 @@ html, body {
 }
 
 @media (min-width: 1024px) and (max-width: 1399px) {
+    .side-wrap {
+        width: 300px;
+        padding-right: 20px;
+    }
+    .content-wrap {
+        max-width: calc(100% - 300px);
+    }
     .footer {
         .form-wrap {
             width: 300px;

@@ -16,6 +16,7 @@ module.exports = function (grunt) {
                     sections: {
                         scripts: '<%= fixturesPath %>/**/scripts.html',
                         head: '<%= fixturesPath %>/**/head.html',
+                        side: '<%= fixturesPath %>/**/side.html',
                         header: '<%= fixturesPath %>/**/header.html',
                         footer: '<%= fixturesPath %>/**/footer.html',
                     },

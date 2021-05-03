@@ -766,6 +766,7 @@ body {
   line-height: 16px;
   font-weight: 600;
   color: #000;
+  position: relative;
   text-decoration: none;
   padding: 4px 15px 4px 67px;
   background: #fff;
@@ -808,6 +809,10 @@ body {
   margin: auto;
   max-width: 100%;
   max-height: 100%;
+}
+.cat-list-wrap .cat-submenu ul {
+  display: none;
+  padding: 8px 0 8px 20px;
 }
 .logo {
   display: block;
@@ -3743,6 +3748,9 @@ body {
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.popup-box.fancybox-content {
+  padding: 0;
+}
 .order-box {
   margin-bottom: 40px;
 }
@@ -7189,6 +7197,33 @@ input[type="submit"].button-third:hover {
 }
 .frm-main-search [placeholder]:-ms-input-placeholder {
   color: var(--clr-light);
+}
+.frm-popup {
+  padding: 2em;
+  width: 300px;
+}
+.frm-popup .frm-row {
+  margin-bottom: 1em;
+}
+.frm-popup .btn,
+.frm-popup button,
+.frm-popup input[type="submit"] {
+  width: 100%;
+}
+.frm-popup .h1-title {
+  text-align: center;
+  margin: 0 0 1em 0;
+  font-size: 1.5em;
+}
+.frm-popup input[type="text"],
+.frm-popup input[type="password"],
+.frm-popup input[type="email"],
+.frm-popup input[type="number"],
+.frm-popup input[type="range"],
+.frm-popup input[type="search"],
+.frm-popup input[type="tel"],
+.frm-popup input[type="url"] {
+  height: 40px;
 }
 @media (max-width: 1023px) {
   .frm-menu-wrap {

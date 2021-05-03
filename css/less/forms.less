@@ -662,6 +662,33 @@ input[type="submit"] {
     [placeholder]::-moz-placeholder {color: var(--clr-light);}
     [placeholder]:-ms-input-placeholder {color: var(--clr-light);}
 }
+.frm-popup {
+    padding: 2em;
+    width: 300px;
+    .frm-row {
+        margin-bottom: 1em;
+    }
+    .btn,
+    button,
+    input[type="submit"] {
+        width: 100%;
+    }
+    .h1-title {
+        text-align: center;
+        margin: 0 0 1em 0;
+        font-size: 1.5em;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    input[type="range"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="url"] {
+        height: 40px;
+    }
+}
 @media (max-width: 1023px) {
     .frm-menu-wrap {
         display: block;

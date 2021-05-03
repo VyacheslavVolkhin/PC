@@ -164,5 +164,16 @@ $(document).ready(function(){
         $('.photos-slider-box .slider-wrap .slider').slick('slickGoTo', newSlide);
         return false;
     })
-	
+
+    //catalog
+    $('.cat-submenu>a').on('click', function() {
+        if ($(this).parent().hasClass('open')) {
+            $(this).parent().removeClass('open').find('ul').slideUp(200);
+        } else {
+            $(this).parent().addClass('open').find('ul').slideDown(200);
+        }
+        return false;
+    })
+
+
 });
